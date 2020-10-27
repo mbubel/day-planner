@@ -1,7 +1,7 @@
 // Get the time working to show the correct date/time
 $("#currentDay").text(moment().format("dddd, MMMM Do"));
-// Array of the divs 9am-5pm to iterate in the function compareTime
-var timeBlocks = [
+// Array of the time between 9am-5pm
+var time = [
   { div: $("#9am"), startTime: "09:00:00", endTime: "09:59:59" },
   { div: $("#10am"), startTime: "10:00:00", endTime: "10:59:59" },
   { div: $("#11am"), startTime: "11:00:00", endTime: "11:59:59" },
@@ -12,33 +12,40 @@ var timeBlocks = [
   { div: $("#4pm"), startTime: "16:00:00", endTime: "16:59:59" },
   { div: $("#5pm"), startTime: "17:00:00", endTime: "17:59:59" },
 ];
-console.log(timeBlocks);
 var format = "hh:mm:ss";
-var curTime = moment();
+var currentTime = moment();
 function compareTime() {
-  // compare the current time to an hour time block
-  // for loop to iterate through my "timeblock" divs for each one check:
-  for (i = 0; i < timeBlocks.length; i++) {
+  // for loop to check the time
+  for (i = 0; i < time.length; i++) {
     console.log(
-      "start time: " +
-        timeBlocks[i].startTime +
-        ", end time: " +
-        timeBlocks[i].endTime
+      "start time: " + time[i].startTime + ", end time: " + time[i].endTime
     );
-    beforeTime = moment(timeBlocks[i].startTime, format);
-    afterTime = moment(timeBlocks[i].endTime, format); // if the current time is within the time block update the div class to .present
-    if (curTime.isBetween(beforeTime, afterTime)) {
+    before = moment(time[i].startTime, format);
+    after = moment(time[i].endTime, format);
+    // If the current time is within the timeblock, add ".present" to the coorresponding div class.
+    if (currentTime.isBetween(before, after)) {
       console.log("is between");
-      timeBlocks[i].div.addClass("present");
-    } // if the current time is after the time block update the div class to .future
-    else if (curTime.isBefore(beforeTime)) {
+      time[i].div.addClass("present");
+    } // If the current time is after the timeblock, add ".future" to the coorresponding div class.
+    else if (currentTime.isBefore(before)) {
       console.log("is before");
-      timeBlocks[i].div.addClass("future");
-    } // if the current time is before the time block update th div class to .past
-    else if (curTime.isAfter(beforeTime)) {
+      time[i].div.addClass("future");
+    } // If the current time is after the timeblock, add ".past" to the coorresponding div class.
+    else if (currentTime.isAfter(before)) {
       console.log("is after");
-      timeBlocks[i].div.addClass("past");
+      time[i].div.addClass("past");
     }
   }
 }
 compareTime();
+
+// Local Storage
+document.getElementById("saveButton").addEventListener(
+  "click",
+  function () {
+    var user = document.getElementById("9am").value;
+    //localStorage["user"] = user ;
+    localStorage.setItem("", user);
+  },
+  false
+);
