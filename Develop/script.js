@@ -52,33 +52,33 @@ $("#saveButton2").click(function(){
 })
 
 $("#saveButton3").click(function(){
-  var TenAm = $("#11am").val();
-   localStorage.setItem("11am notes", TenAm);
+  var ElevenAm = $("#11am").val();
+   localStorage.setItem("11am notes", ElevenAm);
 })
 
 $("#saveButton4").click(function(){
-  var TenAm = $("#12pm").val();
-   localStorage.setItem("12pm notes", TenAm);
+  var TwelvePm = $("#12pm").val();
+   localStorage.setItem("12pm notes", TwelvePm);
 })
 $("#saveButton5").click(function(){
-  var TenAm = $("#1pm").val();
-   localStorage.setItem("1pm notes", TenAm);
+  var OnePme = $("#1pm").val();
+   localStorage.setItem("1pm notes", OnePm);
 })
 $("#saveButton6").click(function(){
-  var TenAm = $("#2pm").val();
-   localStorage.setItem("2pm notes", TenAm);
+  var TwoPm = $("#2pm").val();
+   localStorage.setItem("2pm notes", TwoPm);
 })
 $("#saveButton7").click(function(){
-  var TenAm = $("#3pm").val();
-   localStorage.setItem("3pm notes", TenAm);
+  var ThreePm = $("#3pm").val();
+   localStorage.setItem("3pm notes", ThreePm);
 })
 $("#saveButton8").click(function(){
-  var TenAm = $("#4pm").val();
-   localStorage.setItem("4pm notes", TenAm);
+  var FourPm = $("#4pm").val();
+   localStorage.setItem("4pm notes", FourPm);
 })
 $("#saveButton9").click(function(){
-  var TenAm = $("#5pm").val();
-   localStorage.setItem("5pm notes", TenAm);
+  var FivePm = $("#5pm").val();
+   localStorage.setItem("5pm notes", FivePm);
 })
 
 
