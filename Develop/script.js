@@ -40,12 +40,45 @@ function compareTime() {
 compareTime();
 
 // Local Storage
-document.getElementById("saveButton").addEventListener(
-  "click",
-  function () {
-    var user = document.getElementById("9am").value;
-    //localStorage["user"] = user ;
-    localStorage.setItem("", user);
-  },
-  false
-);
+$("#saveButton1").click(function(){
+  var NineAm = $("#9am").val();
+  localStorage.setItem("9am notes", NineAm);
+  
+})
+
+$("#saveButton2").click(function(){
+  var TenAm = $("#10am").val();
+   localStorage.setItem("10am notes", TenAm);
+})
+
+$("#saveButton3").click(function(){
+  var TenAm = $("#11am").val();
+   localStorage.setItem("11am notes", TenAm);
+})
+
+$("#saveButton4").click(function(){
+  var TenAm = $("#12pm").val();
+   localStorage.setItem("12pm notes", TenAm);
+})
+$("#saveButton5").click(function(){
+  var TenAm = $("#1pm").val();
+   localStorage.setItem("1pm notes", TenAm);
+})
+$("#saveButton6").click(function(){
+  var TenAm = $("#2pm").val();
+   localStorage.setItem("2pm notes", TenAm);
+})
+$("#saveButton7").click(function(){
+  var TenAm = $("#3pm").val();
+   localStorage.setItem("3pm notes", TenAm);
+})
+$("#saveButton8").click(function(){
+  var TenAm = $("#4pm").val();
+   localStorage.setItem("4pm notes", TenAm);
+})
+$("#saveButton9").click(function(){
+  var TenAm = $("#5pm").val();
+   localStorage.setItem("5pm notes", TenAm);
+})
+
+
