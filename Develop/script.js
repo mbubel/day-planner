@@ -40,45 +40,42 @@ function compareTime() {
 compareTime();
 
 // Local Storage
-$("#saveButton1").click(function(){
+$("#saveButton1").click(function () {
   var NineAm = $("#9am").val();
   localStorage.setItem("9am notes", NineAm);
-  
-})
+});
 
-$("#saveButton2").click(function(){
+$("#saveButton2").click(function () {
   var TenAm = $("#10am").val();
-   localStorage.setItem("10am notes", TenAm);
-})
+  localStorage.setItem("10am notes", TenAm);
+});
 
-$("#saveButton3").click(function(){
+$("#saveButton3").click(function () {
   var ElevenAm = $("#11am").val();
-   localStorage.setItem("11am notes", ElevenAm);
-})
+  localStorage.setItem("11am notes", ElevenAm);
+});
 
-$("#saveButton4").click(function(){
+$("#saveButton4").click(function () {
   var TwelvePm = $("#12pm").val();
-   localStorage.setItem("12pm notes", TwelvePm);
-})
-$("#saveButton5").click(function(){
+  localStorage.setItem("12pm notes", TwelvePm);
+});
+$("#saveButton5").click(function () {
   var OnePme = $("#1pm").val();
-   localStorage.setItem("1pm notes", OnePm);
-})
-$("#saveButton6").click(function(){
+  localStorage.setItem("1pm notes", OnePm);
+});
+$("#saveButton6").click(function () {
   var TwoPm = $("#2pm").val();
-   localStorage.setItem("2pm notes", TwoPm);
-})
-$("#saveButton7").click(function(){
+  localStorage.setItem("2pm notes", TwoPm);
+});
+$("#saveButton7").click(function () {
   var ThreePm = $("#3pm").val();
-   localStorage.setItem("3pm notes", ThreePm);
-})
-$("#saveButton8").click(function(){
+  localStorage.setItem("3pm notes", ThreePm);
+});
+$("#saveButton8").click(function () {
   var FourPm = $("#4pm").val();
-   localStorage.setItem("4pm notes", FourPm);
-})
-$("#saveButton9").click(function(){
+  localStorage.setItem("4pm notes", FourPm);
+});
+$("#saveButton9").click(function () {
   var FivePm = $("#5pm").val();
-   localStorage.setItem("5pm notes", FivePm);
-})
-
-
+  localStorage.setItem("5pm notes", FivePm);
+});
