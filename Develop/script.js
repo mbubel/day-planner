@@ -39,7 +39,7 @@ function compareTime() {
 }
 compareTime();
 
-// Local Storage
+// These button clicks store the value entered by the user to be able to be pulled from Local Storage
 $("#saveButton1").click(function () {
   var NineAm = $("#9am").val();
   localStorage.setItem("9am notes", NineAm);
